@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lead With Purpose and Influence - Transform Your Skills. Lead With Confidence. Join our values-based leadership academy.">
+    <meta name="keywords" content="leadership, courses, workshops, values-based leadership, professional development">
+    <meta name="author" content="Leadership Academy">
+    <meta property="og:title" content="Lead With Purpose and Influence - Leadership Academy">
+    <meta property="og:description" content="Transform Your Skills. Lead With Confidence.">
+    <meta property="og:type" content="website">
+    <title>Lead With Purpose and Influence - Leadership Academy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .hero-overlay {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.3) 100%);
+        }
+        
+        .card-hover {
+            transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-primary {
+            transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
+        }
+        
+        .accordion-item {
+            transition: all 300ms ease;
+        }
+        
+        .feature-icon {
+            transition: all 300ms ease;
+        }
+        
+        .feature-card:hover .feature-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+        
+        .mobile-menu {
+            transition: all 300ms ease;
+        }
+        
+        .mobile-menu.active {
+            display: block;
+        }
+        
+        .nav-link {
+            transition: color 300ms ease;
+            position: relative;
+        }
+        
+        .nav-link:hover {
+            color: #2563eb;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #2563eb;
+            transition: width 300ms ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .testimonial-card {
+            transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #2563eb, #1d4ed8);
+            border-radius: 2px;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .star-rating {
+            color: #fbbf24;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+    <!-- Announcement Bar -->
+    <div class="bg-blue-600 text-white py-3 px-4 text-center text-sm font-medium">
+        <i class="fas fa-truck mr-2"></i>Fast Worldwide Shipping (5 days delivery) | 100% Satisfaction Guarantee
+    </div>
+
+    <!-- Header/Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="https://servaas101.github.io/lead-with-purpose-and-influence-2025-11-14-20aap" class="flex items-center gap-2">
+                        <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-crown text-white text-lg"></i>
+                        </div>
+                        <span class="text-xl font-bold text-gray-900">Leadership</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="https://servaas101.github.io/lead-with-purpose-and-influence-2025-11-14-20aap/blog.html" class="nav-link text-gray-700 font-medium">
+                        ← Back
+                    </a>
+                </nav>
+
+                <!-- Right Side Actions -->
+                <div class="hidden md:flex items-center gap-4">
+                    <a href="https://leaddership.co.za/courses" class="btn-primary bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700">
+                        Enroll Now
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-button md:hidden text-gray-700 focus:outline-none" aria-label="Toggle mobile menu">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="mobile-menu hidden md:hidden pb-4 border-t border-gray-200">
+                <a href="https://servaas101.github.io/lead-with-purpose-and-influence-2025-11-14-20aap/blog.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded transition">← Back</a>
+                <a href="https://leaddership.co.za/courses" class="block mt-4 mx-4 bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold text-center hover:bg-blue-700 transition">
+                    Enroll Now
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Blog Post Content -->
+    <article class="py-16 sm:py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Blog Header -->
+            <div class="mb-12">
+                <div class="mb-6">
+                    <span class="inline-block bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-semibold mb-4">Leadership Development</span>
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                        Building Authentic Leadership: The Foundation for Organizational Excellence
+                    </h1>
+                    <div class="flex flex-col sm:flex-row sm:items-center gap-4 text-gray-600">
+                        <div class="flex items-center gap-2">
+                            <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
+                                LA
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-900">Leadership Academy</p>
+                                <p class="text-sm">Published on November 14, 2025</p>
+                            </div>
+                        </div>
+                        <span class="text-sm">8 min read</span>
+                    </div>
+                </div>
+
+                <!-- Featured Image -->
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=675&fit=crop&q=80" alt="Team of diverse professionals collaborating in a modern office environment, demonstrating authentic leadership and teamwork" class="w-full h-auto rounded-xl shadow-lg mb-8">
+            </div>
+
+            <!-- Blog Content -->
+            <div class="prose prose-lg max-w-none">
+                <p class="text-xl text-gray-700 leading-relaxed mb-8 font-light">
+                    In today's rapidly evolving business landscape, organizations face unprecedented challenges—from digital transformation and market disruption to changing workforce expectations and global competition. Yet amid this complexity, one element remains constant: the critical importance of authentic leadership. Leaders who lead with purpose, integrity, and genuine connection create organizational cultures where people thrive, innovation flourishes, and sustainable success becomes possible.
+                </p>
+
+                <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">Understanding Authentic Leadership</h2>
+                
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Authentic leadership goes beyond traditional management techniques and positional authority. It's about leading from a place of genuine self-awareness, clearly articulated values, and a commitment to serving others. Authentic leaders understand their strengths and limitations, make decisions aligned with their core principles, and build trust through transparency and consistency.
+                </p>
+
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Research from the Center for Creative Leadership has consistently shown that leaders who demonstrate authenticity—those who are genuine, transparent, and values-driven—create significantly higher levels of employee engagement, retention, and organizational performance. When leaders are authentic, they give permission for others to be authentic as well, creating psychological safety that enables innovation, honest communication, and meaningful collaboration.
+                </p>
+
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    The distinction between authentic leadership and other leadership styles is important. While charismatic leaders may inspire through personality, and transactional leaders may drive results through incentives, authentic leaders create lasting impact by building genuine relationships based on mutual respect and shared values. They don't rely on manipulation or status to influence others; instead, they lead through example, demonstrating the behaviors and values they expect from their teams.
+                </p>
+
+                <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">The Four Pillars of Authentic Leadership</h2>
+
+                <p class="text-gray-700 leading-relaxed mb-8">
+                    Developing authentic leadership requires attention to four foundational elements:
+                </p>
+
+                <div class="bg-blue-50 border-l-4 border-blue-600 p-6 mb-8 rounded">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">1. Self-Awareness</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Authentic leaders understand their values, strengths, weaknesses, and emotional patterns. They regularly reflect on their impact on others and seek feedback to continuously improve. Self-awareness is the foundation upon which all other aspects of authentic leadership are built. Without understanding yourself, it's impossible to lead authentically.
+                    </p>
+                </div>
+
+                <div class="bg-blue-50 border-l-4 border-blue-600 p-6 mb-8 rounded">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">2. Values Alignment</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Authentic leaders operate from a clear set of personal and organizational values. They make decisions that are consistent with these values, even when facing pressure to compromise. This consistency builds trust and credibility. When leaders align their actions with their stated values, employees trust that leadership decisions are principled rather than politically motivated.
+                    </p>
+                </div>
+
+                <div class="bg-blue-50 border-l-4 border-blue-600 p-6 mb-8 rounded">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">3. Relational Transparency</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        This involves being genuine in relationships, sharing appropriate information openly, and admitting mistakes. Authentic leaders don't hide behind corporate facades; they show up as real people. This vulnerability, when balanced with professional competence, creates deeper connections and models the kind of openness they want to see in their organizations.
+                    </p>
+                </div>
+
+                <div class="bg-blue-50 border-l-4 border-blue-600 p-6 mb-8 rounded">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">4. Balanced Processing</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Authentic leaders actively seek out diverse perspectives before making decisions. They consider multiple viewpoints, challenge their own assumptions, and make thoughtful decisions based on comprehensive information. This approach leads to better decisions and demonstrates respect for others' contributions and expertise.
+                    </p>
+                </div>
+
+                <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">The Business Impact of Authentic Leadership</h2>
+
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Organizations led by authentic leaders consistently demonstrate superior performance across multiple metrics. Companies with high levels of leadership authenticity report 31% lower turnover, 37% higher productivity, and 29% higher profitability compared to those with lower authenticity levels, according to research by the Harvard Business Review.
+                </p>
+
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Why? Authentic leadership creates an environment where people feel valued, trusted, and motivated to contribute their best work. When employees believe their leaders are genuine and principled, they're more likely to go above and beyond their job descriptions, take calculated risks, and contribute creative solutions to organizational challenges. They're also more likely to stay with the organization, reducing costly turnover and maintaining institutional knowledge.
+                </p>
+
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Furthermore, authentic leaders are better equipped to navigate organizational crises. When challenges arise—whether financial downturns, scandals, or market disruptions—organizations led by authentic leaders recover more quickly because employees trust that leadership will handle challenges with integrity. This trust is built over time through consistent demonstration of authentic leadership principles.
+                </p>
+
+                <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">Developing Your Authentic Leadership Practice</h2>
+
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Becoming an authentic leader is a developmental journey rather than a destination. Here are key practices to strengthen your authentic leadership:
+                </p>
+
+                <ul class="space-y-4 mb-8">
+                    <li class="flex gap-4">
+                        <span class="text-blue-600 font-bold text-lg flex-shrink-0">•</span>
+                        <span class="text-gray-700 leading-relaxed"><strong>Invest in self-awareness work:</strong> Engage in regular reflection, seek 360-degree feedback, and work with a coach to understand your leadership impact. Understanding your blind spots is crucial for growth.</span>
+                    </li>
+                    <li class="flex gap-4">
+                        <span class="text-blue-600 font-bold text-lg flex-shrink-0">•</span>
+                        <span class="text-gray-700 leading-relaxed"><strong>Clarify your values:</strong> Take time to articulate what truly matters to you. What principles are non-negotiable? What legacy do you want to leave? Use these values as a compass for decision-making.</span>
+                    </li>
+                    <li class="flex gap-4">
+                        <span class="text-blue-600 font-bold text-lg flex-shrink-0">•</span>
+                        <span class="text-gray-700 leading-relaxed"><strong>Practice transparent communication:</strong> Share your thinking, admit when you don't have all the answers, and acknowledge mistakes. This modeling of vulnerability creates psychological safety for others.</span>
+                    </li>
+                    <li class="flex gap-4">
+                        <span class="text-blue-600 font-bold text-lg flex-shrink-0">•</span>
+                        <span class="text-gray-700 leading-relaxed"><strong>Build diverse relationships:</strong> Intentionally develop relationships with people who think differently than you. Seek out perspectives that challenge your assumptions and broaden your understanding.</span>
+                    </li>
+                    <li class="flex gap-4">
+                        <span class="text-blue-600 font-bold text-lg flex-shrink-0">•</span>
+                        <span class="text-gray-700 leading-relaxed"><strong>Establish accountability structures:</strong> Share your leadership development goals with trusted colleagues or mentors. Regular check-ins help maintain focus and provide external perspective on your progress.</span>
+                    </li>
+                </ul>
+
+                <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">Overcoming Common Challenges</h2>
+
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    The path to authentic leadership isn't without obstacles. Many leaders struggle with the vulnerability that authenticity requires, particularly in competitive corporate environments. Others find it challenging to maintain values alignment when facing pressure to compromise for short-term gains.
+                </p>
+
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    The key is recognizing that authentic leadership isn't about being perfect or having all the answers. It's about being genuine, learning from mistakes, and consistently working to align your actions with your values. When leaders acknowledge their imperfections and demonstrate commitment to continuous improvement, they actually strengthen their credibility rather than diminish it.
+                </p>
+
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Organizations that create cultures supporting authentic leadership—through mentorship programs, leadership development initiatives, and explicit recognition of authenticity as a valued competency—find that leaders at all levels develop these capabilities more effectively. Creating accountability for authentic leadership behaviors ensures that the organization's stated values translate into actual leadership practices.
+                </p>
+
+                <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">The Future of Leadership</h2>
+
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    As organizations navigate unprecedented change, the need for authentic leadership has never been greater. Employees increasingly seek meaning in their work and want to work for leaders they can trust and respect. Authentic leadership isn't a soft skill or nice-to-have—it's a business imperative.
+                </p>
+
+                <p class="text-gray-700 leading-relaxed mb-8">
+                    The leaders who will thrive in the coming years are those who build organizations grounded in authentic relationships, clear values, and genuine commitment to serving their people and communities. They understand that sustainable success comes not from extracting maximum value from people and resources, but from creating environments where people can do their best work while maintaining their integrity and sense of purpose.
+                </p>
+
+                <div class="bg-gradient-to-r from-blue-50 to-blue-100 border border-blue-200 p-8 rounded-xl mt-12">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Ready to Develop Your Authentic Leadership?</h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        Our comprehensive leadership programs are designed to help you develop the self-awareness, values clarity, and relational skills that define authentic leadership. Through personalized coaching, interactive workshops, and peer learning communities, you'll accelerate your development and create lasting impact in your organization.
+                    </p>
+                    <a href="https://leaddership.co.za/courses" class="btn-primary inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-700 transition duration-300">
+                        Explore Leadership Programs
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Share Section -->
+            <div class="mt-16 pt-8 border-t border-gray-200">
+                <h3 class="text-lg font-bold text-gray-900 mb-6">Share This Article</h3>
+                <div class="flex gap-4">
+                    <a href="#" class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 hover:bg-blue-600 hover:text-white transition duration-300" title="Share on Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 hover:bg-blue-600 hover:text-white transition duration-300" title="Share on Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 hover:bg-blue-600 hover:text-white transition duration-300" title="Share on LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 hover:bg-blue-600 hover:text-white transition duration-300" title="Copy link">
+                        <i class="fas fa-link"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- Related Articles Section -->
+    <section class="py-16 sm:py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-12">Related Articles</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Related Article 1 -->
+                <article class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=250&fit=crop&q=80" alt="Team collaboration and emotional intelligence in leadership" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="inline-block bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-xs font-semibold mb-3">Leadership Skills</span>
+                        <h3 class="text-lg font-bold text-gray-900 mb-3">Emotional Intelligence: The Secret Weapon of Effective Leaders</h3>
+                        <p class="text-gray-600 text-sm mb-4">Discover how emotional intelligence transforms leadership effectiveness and organizational culture...</p>
+                        <a href="#" class="text-blue-600 font-semibold hover:text-blue-700 transition">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Related Article 2 -->
+                <article class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=250&fit=crop&q=80" alt="Strategic decision making and organizational leadership" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="inline-block bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-xs font-semibold mb-3">Strategy</span>
+                        <h3 class="text-lg font-bold text-gray-900 mb-3">Strategic Decision-Making: A Framework for Modern Leaders</h3>
+                        <p class="text-gray-600 text-sm mb-4">Learn proven frameworks for making strategic decisions that drive organizational success...</p>
+                        <a href="#" class="text-blue-600 font-semibold hover:text-blue-700 transition">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Related Article 3 -->
+                <article class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=250&fit=crop&q=80" alt="Building high-performing teams through effective leadership" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="inline-block bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-xs font-semibold mb-3">Team Building</span>
+                        <h3 class="text-lg font-bold text-gray-900 mb-3">Building High-Performing Teams: From Concept to Culture</h3>
+                        <p class="text-gray-600 text-sm mb-4">Explore the essential elements of creating teams that consistently deliver exceptional results...</p>
+                        <a href="#" class="text-blue-600 font-semibold hover:text-blue-700 transition">Read More →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 sm:py-20 bg-gradient-to-r from-blue-600 to-blue-800 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <svg class="w-full h-full" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice">
+                <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="1"/>
+                </pattern>
+                <rect width="1200" height="600" fill="url(#grid)" />
+            </svg>
+        </div>
+        <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
+                Transform Your Leadership Today
+            </h2>
+            <p class="text-lg text-blue-100 mb-8 leading-relaxed">
+                Join thousands of leaders who are building authentic leadership practices and creating meaningful impact in their organizations.
+            </p>
+            <a href="https://leaddership.co.za/courses" class="btn-primary inline-block bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition duration-300">
+                Start Your Leadership Journey
+                <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-crown text-white"></i>
+                        </div>
+                        <span class="text-xl font-bold text-white">Leadership</span>
+                    </div>
+                    <p class="text-sm leading-relaxed mb-4">
+                        Empowering leaders worldwide to lead with purpose, integrity, and influence. Transform your skills and create meaningful impact.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition duration-300">
+                            <i class="fab fa-facebook-f text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition duration-300">
+                            <i class="fab fa-twitter text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition duration-300">
+                            <i class="fab fa-linkedin-in text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition duration-300">
+                            <i class="fab fa-instagram text-white"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="https://servaas101.github.io/lead-with-purpose-and-influence-2025-11-14-20aap" class="hover:text-blue-400 transition duration-300">Home</a></li>
+                        <li><a href="https://servaas101.github.io/lead-with-purpose-and-influence-2025-11-14-20aap#features" class="hover:text-blue-400 transition duration-300">Features</a></li>
+                        <li><a href="https://servaas101.github.io/lead-with-purpose-and-influence-2025-11-14-20aap#benefits" class="hover:text-blue-400 transition duration-300">Benefits</a></li>
+                        <li><a href="https://servaas101.github.io/lead-with-purpose-and-influence-2025-11-14-20aap#about" class="hover:text-blue-400 transition duration-300">About Us</a></li>
+                        <li><a href="https://servaas101.github.io/lead-with-purpose-and-influence-2025-11-14-20aap#testimonials" class="hover:text-blue-400 transition duration-300">Testimonials</a></li>
+                        <li><a href="https://servaas101.github.io/lead-with-purpose-and-influence-2025-11-14-20aap#faq" class="hover:text-blue-400 transition duration-300">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-6">Resources</h4>
+                    <ul class="space-y-3">
+                        <li><a href="https://leaddership.co.za/courses" class="hover:text-blue-400 transition duration-300">All Courses</a></li>
+                        <li><a href="blog.html" class="hover:text-blue-400 transition duration-300">Blog</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition duration-300">Webinars</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition duration-300">Community</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition duration-300">Events</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition duration-300">Support</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-6">Legal</h4>
+                    <ul class="space-y-3">
+                        <li><a href="privacy.html" class="hover:text-blue-400 transition duration-300">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="hover:text-blue-400 transition duration-300">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition duration-300">Cookie Policy</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition duration-300">Accessibility</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition duration-300">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Divider -->
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-sm text-gray-400">
+                        &copy; <span id="year"></span> Leadership Academy. All rights reserved. | Transforming leaders, transforming the world.
+                    </p>
+                    <div class="flex gap-6 text-sm">
+                        <a href="privacy.html" class="text-gray-400 hover:text-blue-400 transition duration-300">Privacy</a>
+                        <a href="terms.html" class="text-gray-400 hover:text-blue-400 transition duration-300">Terms</a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition duration-300">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="fixed bottom-8 right-8 w-12 h-12 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition duration-300 flex items-center justify-center hidden z-40" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        if (mobileMenuButton) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('active');
+            });
+
+            // Close menu when a link is clicked
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.remove('active');
+                });
+            });
+        }
+
+        // Scroll to Top Button
+        const scrollToTopButton = document.getElementById('scrollToTop');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollToTopButton.classList.remove('hidden');
+            } else {
+                scrollToTopButton.classList.add('hidden');
+            }
+        });
+
+        scrollToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && document.querySelector(href)) {
+                    e.preventDefault();
+                    document.querySelector(href).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
