@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lead With Purpose and Influence - Transform Your Skills. Lead With Confidence. Join our values-based leadership academy.">
+    <meta name="keywords" content="leadership, courses, workshops, values-based leadership, professional development">
+    <meta name="author" content="Leadership Academy">
+    <meta property="og:title" content="Lead With Purpose and Influence - Leadership Academy">
+    <meta property="og:description" content="Transform Your Skills. Lead With Confidence.">
+    <meta property="og:type" content="website">
+    <title>Lead With Purpose and Influence - Leadership Academy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .hero-overlay {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.3) 100%);
+        }
+        
+        .card-hover {
+            transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-primary {
+            transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
+        }
+        
+        .accordion-item {
+            transition: all 300ms ease;
+        }
+        
+        .feature-icon {
+            transition: all 300ms ease;
+        }
+        
+        .feature-card:hover .feature-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+        
+        .mobile-menu {
+            transition: all 300ms ease;
+        }
+        
+        .mobile-menu.active {
+            display: block;
+        }
+        
+        .nav-link {
+            transition: color 300ms ease;
+            position: relative;
+        }
+        
+        .nav-link:hover {
+            color: #2563eb;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #2563eb;
+            transition: width 300ms ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .testimonial-card {
+            transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #2563eb, #1d4ed8);
+            border-radius: 2px;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .star-rating {
+            color: #fbbf24;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+    <!-- Announcement Bar -->
+    <div class="bg-blue-600 text-white py-3 px-4 text-center text-sm font-medium">
+        <i class="fas fa-truck mr-2"></i>Fast Worldwide Shipping (5 days delivery) | 100% Satisfaction Guarantee
+    </div>
+
+    <!-- Header/Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="#home" class="flex items-center gap-2">
+                        <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-crown text-white text-lg"></i>
+                        </div>
+                        <span class="text-xl font-bold text-gray-900">Leadership</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="#home" class="nav-link text-gray-700 font-medium">Home</a>
+                    <a href="#features" class="nav-link text-gray-700 font-medium">Features</a>
+                    <a href="#benefits" class="nav-link text-gray-700 font-medium">Benefits</a>
+                    <a href="#about" class="nav-link text-gray-700 font-medium">About</a>
+                    <a href="#testimonials" class="nav-link text-gray-700 font-medium">Testimonials</a>
+                    <a href="#faq" class="nav-link text-gray-700 font-medium">FAQ</a>
+                    <a href="#contact" class="nav-link text-gray-700 font-medium">Contact</a>
+                </nav>
+
+                <!-- Right Side Actions -->
+                <div class="hidden md:flex items-center gap-4">
+                    <div class="relative">
+                        <input type="text" placeholder="Search..." class="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 w-48 text-sm">
+                        <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                    </div>
+                    <a href="https://leaddership.co.za/courses" class="btn-primary bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700">
+                        Enroll Now
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-button md:hidden text-gray-700 focus:outline-none" aria-label="Toggle mobile menu">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="mobile-menu hidden md:hidden pb-4 border-t border-gray-200">
+                <a href="#home" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded transition">Home</a>
+                <a href="#features" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded transition">Features</a>
+                <a href="#benefits" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded transition">Benefits</a>
+                <a href="#about" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded transition">About</a>
+                <a href="#testimonials" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded transition">Testimonials</a>
+                <a href="#faq" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded transition">FAQ</a>
+                <a href="#contact" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded transition">Contact</a>
+                <a href="https://leaddership.co.za/courses" class="block mt-4 mx-4 bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold text-center hover:bg-blue-700 transition">
+                    Enroll Now
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1504093376055-b3094b674dcb?w=1600&h=900&fit=crop&q=80" alt="Leadership hero background" class="w-full h-full object-cover">
+            <div class="hero-overlay absolute inset-0"></div>
+        </div>
+
+        <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6 tracking-tight">
+                Lead With Purpose and Influence
+            </h1>
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-100 mb-8 leading-relaxed font-light">
+                Transform Your Skills. Lead With Confidence.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://leaddership.co.za/courses" class="btn-primary bg-blue-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-700 inline-block">
+                    Start Your Journey
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+                <button class="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition duration-300 inline-block">
+                    Learn More
+                    <i class="fas fa-chevron-down ml-2"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
+            <div class="animate-bounce">
+                <i class="fas fa-chevron-down text-white text-2xl"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 sm:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-title text-4xl sm:text-5xl font-bold text-gray-900 mb-4 pb-4">
+                    Our Core Features
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Discover the key features that make our leadership academy the premier choice for transforming your professional journey
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1: Values-based Leadership -->
+                <div class="feature-card card-hover bg-white border border-gray-200 rounded-xl p-8 hover:border-blue-300">
+                    <div class="mb-6">
+                        <div class="feature-icon w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-compass text-2xl text-blue-600"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Values-based Leadership</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        Learn to lead with authentic values and principles that inspire trust and create meaningful impact within your organization and community.
+                    </p>
+                    <ul class="space-y-2 text-gray-600 text-sm">
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span>Authentic leadership principles</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span>Value-aligned decision making</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span>Ethical leadership framework</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Feature 2: Workshops -->
+                <div class="feature-card card-hover bg-white border border-gray-200 rounded-xl p-8 hover:border-blue-300">
+                    <div class="mb-6">
+                        <div class="feature-icon w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-users text-2xl text-blue-600"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Interactive Workshops</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        Engage in dynamic, hands-on workshops designed to develop practical leadership skills through real-world scenarios and peer collaboration.
+                    </p>
+                    <ul class="space-y-2 text-gray-600 text-sm">
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span>Hands-on skill development</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span>Peer learning environment</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span>Expert-led sessions</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Feature 3: Courses -->
+                <div class="feature-card card-hover bg-white border border-gray-200 rounded-xl p-8 hover:border-blue-300">
+                    <div class="mb-6">
+                        <div class="feature-icon w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-book text-2xl text-blue-600"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Comprehensive Courses</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        Access our extensive library of self-paced and instructor-led courses covering all aspects of modern leadership development.
+                    </p>
+                    <ul class="space-y-2 text-gray-600 text-sm">
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span>Self-paced learning</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span>Certification programs</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span>Lifetime access</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-20 sm:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-title text-4xl sm:text-5xl font-bold text-gray-900 mb-4 pb-4">
+                    Transform Your Leadership Journey
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Experience the profound benefits that our academy members achieve on their path to becoming influential leaders
+                </p>
+            </div>
+
+            <!-- Benefit 1: Accessible Growth -->
+            <div class="mb-20">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 md:order-1">
+                        <img src="https://images.unsplash.com/photo-1556740714-a8395b3bf30f?w=800&h=600&fit=crop&q=80" alt="Accessible Growth" class="rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+                    </div>
+                    <div class="order-1 md:order-2 bg-white p-8 rounded-xl">
+                        <h3 class="text-3xl font-bold text-gray-900 mb-4 gradient-text">Accessible Growth</h3>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            We believe leadership development should be accessible to everyone. Our flexible learning options, affordable pricing, and inclusive community ensure that aspiring leaders from all backgrounds can access world-class education and mentorship. Whether you're just starting your career or seeking to advance to executive levels, we provide pathways tailored to your unique circumstances and goals.
+                        </p>
+                        <div class="space-y-3">
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-blue-600 mt-1 flex-shrink-0"></i>
+                                <span class="text-gray-700"><strong>Flexible scheduling</strong> that fits your lifestyle</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-blue-600 mt-1 flex-shrink-0"></i>
+                                <span class="text-gray-700"><strong>Affordable pricing</strong> with multiple payment options</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-blue-600 mt-1 flex-shrink-0"></i>
+                                <span class="text-gray-700"><strong>Diverse community</strong> of learners worldwide</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Benefit 2: Unlock Potential -->
+            <div class="mb-20">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center bg-gray-50">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1502982720700-bfff97f2ecac?w=800&h=600&fit=crop&q=80" alt="Unlock Potential" class="rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+                    </div>
+                    <div class="bg-white p-8 rounded-xl">
+                        <h3 class="text-3xl font-bold text-gray-900 mb-4 gradient-text">Unlock Your Full Potential</h3>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            Discover capabilities you never knew you had. Our comprehensive programs are designed to help you identify your unique strengths, overcome limiting beliefs, and develop the confidence needed to tackle complex challenges. Through personalized coaching, peer mentoring, and evidence-based frameworks, you'll unlock dimensions of your potential that drive career advancement and personal fulfillment.
+                        </p>
+                        <div class="space-y-3">
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-blue-600 mt-1 flex-shrink-0"></i>
+                                <span class="text-gray-700"><strong>Personalized coaching</strong> from industry experts</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-blue-600 mt-1 flex-shrink-0"></i>
+                                <span class="text-gray-700"><strong>Self-discovery tools</strong> and assessments</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-blue-600 mt-1 flex-shrink-0"></i>
+                                <span class="text-gray-700"><strong>Career acceleration</strong> strategies and tactics</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Benefit 3: Guidance to Soar -->
+            <div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 md:order-1">
+                        <img src="https://images.unsplash.com/photo-1471341971476-ae15ff5dd4ea?w=800&h=600&fit=crop&q=80" alt="Guidance to Soar" class="rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+                    </div>
+                    <div class="order-1 md:order-2 bg-white p-8 rounded-xl">
+                        <h3 class="text-3xl font-bold text-gray-900 mb-4 gradient-text">Guidance to Soar</h3>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            Leadership can feel isolating, especially when navigating critical decisions and organizational challenges. Our academy provides continuous guidance through experienced mentors, peer support networks, and expert advisors who understand the complexities of modern leadership. You'll never feel alone on your journey as we provide the compass and support system needed to navigate toward your highest aspirations.
+                        </p>
+                        <div class="space-y-3">
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-blue-600 mt-1 flex-shrink-0"></i>
+                                <span class="text-gray-700"><strong>Mentorship programs</strong> with seasoned leaders</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-blue-600 mt-1 flex-shrink-0"></i>
+                                <span class="text-gray-700"><strong>Peer support networks</strong> for accountability</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-blue-600 mt-1 flex-shrink-0"></i>
+                                <span class="text-gray-700"><strong>Ongoing support</strong> throughout your career</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section 1 -->
+    <section class="py-20 sm:py-24 bg-gradient-to-r from-blue-600 to-blue-800 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <svg class="w-full h-full" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice">
+                <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="1"/>
+                </pattern>
+                <rect width="1200" height="600" fill="url(#grid)" />
+            </svg>
+        </div>
+        <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl sm:text-5xl font-bold text-white mb-6">
+                Ready to Transform Your Leadership?
+            </h2>
+            <p class="text-xl text-blue-100 mb-8 leading-relaxed">
+                Join thousands of leaders who have already transformed their careers and organizations through our proven programs and mentorship.
+            </p>
+            <a href="https://leaddership.co.za/courses" class="btn-primary inline-block bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition duration-300">
+                Enroll in Our Programs
+                <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-20 sm:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-title text-4xl sm:text-5xl font-bold text-gray-900 mb-4 pb-4">
+                    About Leadership Academy
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop&q=80" alt="About Leadership Academy" class="rounded-xl shadow-lg">
+                </div>
+                <div>
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4">Our Story</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                Founded in 2015, Leadership Academy emerged from a simple but powerful observation: the world needed accessible, values-based leadership development. Our founders, a collective of organizational psychologists, executive coaches, and seasoned business leaders, recognized that traditional leadership programs often failed to address the human element of leadership. They envisioned creating a space where aspiring and established leaders could grow not just in their technical competencies, but in their character, emotional intelligence, and ability to inspire others. What started as a small cohort of 25 participants has grown into a thriving global community of over 50,000 leaders across 120 countries, all united by a commitment to leading with purpose and integrity.
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4">Our Mission & Vision</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                Our mission is to empower leaders to lead with purpose, integrity, and influence, creating positive impact in their organizations and communities. We believe that authentic leadership—grounded in clear values, emotional intelligence, and a commitment to serving others—is the foundation for organizational excellence and societal progress. Our vision is a world where every leader understands their power to inspire, transform, and uplift those around them. We're committed to democratizing access to world-class leadership education, ensuring that geography, background, or economic status never limits someone's ability to develop into an exceptional leader. Through our programs, mentorship, and community, we're building a generation of leaders who lead with heart, think strategically, and drive meaningful change.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 sm:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-title text-4xl sm:text-5xl font-bold text-gray-900 mb-4 pb-4">
+                    What Our Leaders Say
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Hear from leaders across industries who have transformed their careers and organizations through our academy
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-white p-8 rounded-xl border border-gray-200">
+                    <div class="flex items-center gap-1 mb-4">
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        "The values-based leadership program completely transformed how I approach my role as a CEO. I went from managing by metrics to leading by purpose, and the results have been extraordinary. My team engagement scores increased by 45%, and we've attracted top talent who align with our values. This academy gave me the framework and confidence to lead authentically."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
+                            SM
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-900">Sarah Mitchell</p>
+                            <p class="text-sm text-gray-600">CEO, TechVision Inc.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-white p-8 rounded-xl border border-gray-200">
+                    <div class="flex items-center gap-1 mb-4">
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        "I was stuck in middle management for 8 years, feeling like I lacked the skills to advance. The workshops at Leadership Academy were game-changing. The interactive sessions taught me practical negotiation techniques, emotional intelligence strategies, and how to communicate my value. Within 18 months, I was promoted to VP. This investment in myself paid off immediately."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
+                            JK
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-900">James Kumar</p>
+                            <p class="text-sm text-gray-600">VP Operations, Global Finance Group</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-white p-8 rounded-xl border border-gray-200">
+                    <div class="flex items-center gap-1 mb-4">
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        "As an entrepreneur building my first company, I felt overwhelmed and uncertain about my leadership abilities. The personalized coaching and peer mentoring from this academy were invaluable. I learned how to build a strong company culture from day one, delegate effectively, and navigate the emotional rollercoaster of startup life. My team is now 40 people strong, and we've maintained our values-driven culture throughout our growth."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
+                            AJ
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-900">Amara Johnson</p>
+                            <p class="text-sm text-gray-600">Founder & CEO, EcoInnovate Solutions</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card bg-white p-8 rounded-xl border border-gray-200">
+                    <div class="flex items-center gap-1 mb-4">
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        "After 20 years in corporate leadership, I was burnt out and questioning my purpose. The academy's courses on authentic leadership and personal values alignment helped me rediscover why I lead. I've since transitioned to leading a non-profit, using the same strategic and emotional intelligence skills but now with greater fulfillment. This program doesn't just develop better leaders—it helps you become a better human."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
+                            RC
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-900">Robert Chen</p>
+                            <p class="text-sm text-gray-600">Executive Director, Community Development Foundation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 sm:py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-title text-4xl sm:text-5xl font-bold text-gray-900 mb-4 pb-4">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-lg text-gray-600">
+                    Find answers to common questions about our programs and how we can help you grow as a leader
+                </p>
+            </div>
+
+            <div class="space-y-6">
+                <!-- FAQ 1 -->
+                <div class="accordion-item bg-gray-50 border border-gray-200 rounded-lg overflow-hidden hover:border-blue-300 transition">
+                    <button class="faq-button w-full px-6 py-4 flex items-center justify-between hover:bg-gray-100 transition" aria-expanded="false">
+                        <span class="text-lg font-semibold text-gray-900 text-left">What makes your leadership programs different from other academies?</span>
+                        <i class="fas fa-chevron-down text-blue-600 transition duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4 text-gray-600 leading-relaxed border-t border-gray-200">
+                        <p>Our academy stands out through our unique focus on values-based leadership combined with practical skill development. Unlike traditional programs that focus solely on management techniques, we integrate emotional intelligence, authentic leadership principles, and ethical decision-making throughout all our courses. Our instructors are practicing leaders, not just academics, and our peer-learning community creates accountability and lasting relationships. Additionally, our flexible learning options—combining self-paced courses, live workshops, and personalized coaching—ensure you can develop at your own pace while receiving expert guidance. We also maintain lifelong access to our community and resources, so your learning journey doesn't end when a course does.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="accordion-item bg-gray-50 border border-gray-200 rounded-lg overflow-hidden hover:border-blue-300 transition">
+                    <button class="faq-button w-full px-6 py-4 flex items-center justify-between hover:bg-gray-100 transition" aria-expanded="false">
+                        <span class="text-lg font-semibold text-gray-900 text-left">How long does it take to complete a program, and can I balance it with my current job?</span>
+                        <i class="fas fa-chevron-down text-blue-600 transition duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4 text-gray-600 leading-relaxed border-t border-gray-200">
+                        <p>Most of our core programs are designed to be completed over 3-6 months, though you set your own pace. Our self-paced courses allow you to progress as quickly or slowly as your schedule permits—many participants complete modules during their commute or on weekends. Live workshops are scheduled at various times (morning, evening, and weekend options) to accommodate different time zones and work schedules. We recommend dedicating 5-10 hours per week for optimal learning, but this is flexible. Many of our most successful participants are full-time working professionals who integrate learning into their existing routines. We also offer corporate group programs where organizations can customize timing and content to fit their needs. The key is consistency rather than intensity—regular engagement produces better results than trying to cram everything into a short period.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="accordion-item bg-gray-50 border border-gray-200 rounded-lg overflow-hidden hover:border-blue-300 transition">
+                    <button class="faq-button w-full px-6 py-4 flex items-center justify-between hover:bg-gray-100 transition" aria-expanded="false">
+                        <span class="text-lg font-semibold text-gray-900 text-left">What level of leadership experience do I need to join the academy?</span>
+                        <i class="fas fa-chevron-down text-blue-600 transition duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4 text-gray-600 leading-relaxed border-t border-gray-200">
+                        <p>Our programs are designed for leaders at all levels, from emerging leaders just stepping into their first management role to C-suite executives. We offer different pathways and course levels to match your experience. If you're early in your leadership journey, our foundational courses cover essential skills like communication, delegation, and emotional intelligence. If you're an experienced leader, our advanced programs focus on strategic leadership, organizational transformation, and executive presence. During enrollment, we assess your current level and recommend the most appropriate starting point. Many participants also find value in reviewing foundational material even if they have experience—it provides a common language with peers and often reveals blind spots. The beauty of our peer-learning model is that leaders at different levels learn from each other; emerging leaders gain insights from veterans, while experienced leaders often rediscover fundamentals through fresh perspectives.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="accordion-item bg-gray-50 border border-gray-200 rounded-lg overflow-hidden hover:border-blue-300 transition">
+                    <button class="faq-button w-full px-6 py-4 flex items-center justify-between hover:bg-gray-100 transition" aria-expanded="false">
+                        <span class="text-lg font-semibold text-gray-900 text-left">Do you offer certifications, and will they help advance my career?</span>
+                        <i class="fas fa-chevron-down text-blue-600 transition duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4 text-gray-600 leading-relaxed border-t border-gray-200">
+                        <p>Yes, we offer recognized certifications across all our major programs. Our certifications are valued by employers because they represent demonstrated competency in both leadership theory and practical application. To earn a certification, you complete coursework, participate in workshops, and complete a capstone project where you apply your learning to a real organizational challenge. Our certifications are recognized internationally and many of our alumni report that their credentials helped them secure promotions, attract recruiters, or transition into new roles. However, the real career benefit comes from the skills and network you develop. Our alumni network is incredibly active—many career opportunities come through peer connections made during programs. We also provide career coaching and job placement support as part of our commitment to your long-term success. Beyond the credential, what matters most is how you apply what you've learned to create measurable impact in your role.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section 2 -->
+    <section class="py-20 sm:py-24 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+                Start Your Leadership Transformation Today
+            </h2>
+            <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                Join our community of leaders committed to making a positive impact. Your journey begins with a single step.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://leaddership.co.za/courses" class="btn-primary bg-blue-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-700 inline-block">
+                    Explore Our Programs
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+                <button class="bg-white text-blue-600 border-2 border-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition duration-300 inline-block">
+                    Schedule a Consultation
+                    <i class="fas fa-calendar ml-2"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 sm:py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-title text-4xl sm:text-5xl font-bold text-gray-900 mb-4 pb-4">
+                    Get In Touch
+                </h2>
+                <p class="text-lg text-gray-600">
+                    Have questions? We'd love to hear from you. Reach out and let's discuss how we can support your leadership journey.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Contact Info -->
+                <div class="space-y-8">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-envelope text-blue-600 text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-900 mb-1">Email</h3>
+                            <a href="mailto:leaddershipacademy@leaddership.co.za" class="text-gray-600 hover:text-blue-600 transition">
+                                leaddershipacademy@leaddership.co.za
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-map-marker-alt text-blue-600 text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-900 mb-1">Headquarters</h3>
+                            <p class="text-gray-600">
+                                Cape Town, South Africa
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-globe text-blue-600 text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-900 mb-1">Online Learning</h3>
+                            <p class="text-gray-600">
+                                Available worldwide
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-clock text-blue-600 text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-900 mb-1">Response Time</h3>
+                            <p class="text-gray-600">
+                                We typically respond within 24 hours
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-gray-50 p-8 rounded-xl border border-gray-200">
+                    <form class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-sm font-semibold text-gray-900 mb-2">Full Name</label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Your name">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-semibold text-gray-900 mb-2">Email Address</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="your@email.com">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-semibold text-gray-900 mb-2">Message</label>
+                            <textarea id="message" name="message" rows="4" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none" placeholder="Tell us about your leadership goals..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary w-full bg-blue-600 text-white py-3 rounded-lg font-bold hover:bg-blue-700 transition duration-300">
+                            Send Message
+                            <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-crown text-white"></i>
+                        </div>
+                        <span class="text-xl font-bold text-white">Leadership</span>
+                    </div>
+                    <p class="text-sm leading-relaxed mb-4">
+                        Empowering leaders worldwide to lead with purpose, integrity, and influence. Transform your skills and create meaningful impact.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition duration-300">
+                            <i class="fab fa-facebook-f text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition duration-300">
+                            <i class="fab fa-twitter text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition duration-300">
+                            <i class="fab fa-linkedin-in text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition duration-300">
+                            <i class="fab fa-instagram text-white"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="hover:text-blue-400 transition duration-300">Home</a></li>
+                        <li><a href="#features" class="hover:text-blue-400 transition duration-300">Features</a></li>
+                        <li><a href="#benefits" class="hover:text-blue-400 transition duration-300">Benefits</a></li>
+                        <li><a href="#about" class="hover:text-blue-400 transition duration-300">About Us</a></li>
+                        <li><a href="#testimonials" class="hover:text-blue-400 transition duration-300">Testimonials</a></li>
+                        <li><a href="#faq" class="hover:text-blue-400 transition duration-300">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-6">Resources</h4>
+                    <ul class="space-y-3">
+                        <li><a href="https://leaddership.co.za/courses" class="hover:text-blue-400 transition duration-300">All Courses</a></li>
+                        <li><a href="blog.html" class="hover:text-blue-400 transition duration-300">Blog</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition duration-300">Webinars</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition duration-300">Community</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition duration-300">Events</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition duration-300">Support</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-6">Legal</h4>
+                    <ul class="space-y-3">
+                        <li><a href="privacy.html" class="hover:text-blue-400 transition duration-300">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="hover:text-blue-400 transition duration-300">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition duration-300">Cookie Policy</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition duration-300">Accessibility</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition duration-300">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Divider -->
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-sm text-gray-400">
+                        &copy; <span id="year"></span> Leadership Academy. All rights reserved. | Transforming leaders, transforming the world.
+                    </p>
+                    <div class="flex gap-6 text-sm">
+                        <a href="privacy.html" class="text-gray-400 hover:text-blue-400 transition duration-300">Privacy</a>
+                        <a href="terms.html" class="text-gray-400 hover:text-blue-400 transition duration-300">Terms</a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition duration-300">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="fixed bottom-8 right-8 w-12 h-12 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition duration-300 flex items-center justify-center hidden z-40" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        if (mobileMenuButton) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('active');
+            });
+
+            // Close menu when a link is clicked
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.remove('active');
+                });
+            });
+        }
+
+        // FAQ Accordion
+        const faqButtons = document.querySelectorAll('.faq-button');
+        faqButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const isOpen = content.classList.contains('hidden');
+                
+                // Close all other accordions
+                document.querySelectorAll('.faq-content').forEach(item => {
+                    item.classList.add('hidden');
+                });
+                document.querySelectorAll('.faq-button').forEach(btn => {
+                    btn.setAttribute('aria-expanded', 'false');
+                });
+
+                // Open clicked accordion
+                if (isOpen) {
+                    content.classList.remove('hidden');
+                    button.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+
+        // Scroll to Top Button
+        const scrollToTopButton = document.getElementById('scrollToTop');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollToTopButton.classList.remove('hidden');
+            } else {
+                scrollToTopButton.classList.add('hidden');
+            }
+        });
+
+        scrollToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && document.querySelector(href)) {
+                    e.preventDefault();
+                    document.querySelector(href).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Form submission
+        const contactForm = document.querySelector('form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                // In a real application, this would send the form data to a server
+                alert('Thank you for your message! We will get back to you shortly.');
+                contactForm.reset();
+            });
+        }
+    </script>
+</body>
+</html>
