@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Leadership Academy Blog - Transform Your Skills. Lead With Confidence. Join our values-based leadership academy.">
+    <meta name="keywords" content="leadership, blog, articles, values-based leadership, professional development, authentic leadership">
+    <meta name="author" content="Leadership Academy">
+    <meta property="og:title" content="Leadership Academy Blog - Lead With Purpose and Influence">
+    <meta property="og:description" content="Discover insights, strategies, and stories about authentic leadership and professional growth.">
+    <meta property="og:type" content="website">
+    <title>Leadership Academy Blog - Lead With Purpose and Influence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .hero-overlay {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.3) 100%);
+        }
+        
+        .card-hover {
+            transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-primary {
+            transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
+        }
+        
+        .accordion-item {
+            transition: all 300ms ease;
+        }
+        
+        .feature-icon {
+            transition: all 300ms ease;
+        }
+        
+        .feature-card:hover .feature-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+        
+        .mobile-menu {
+            transition: all 300ms ease;
+        }
+        
+        .mobile-menu.active {
+            display: block;
+        }
+        
+        .nav-link {
+            transition: color 300ms ease;
+            position: relative;
+        }
+        
+        .nav-link:hover {
+            color: #2563eb;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #2563eb;
+            transition: width 300ms ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .testimonial-card {
+            transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #2563eb, #1d4ed8);
+            border-radius: 2px;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .star-rating {
+            color: #fbbf24;
+        }
+        
+        .blog-card {
+            transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+    <!-- Announcement Bar -->
+    <div class="bg-blue-600 text-white py-3 px-4 text-center text-sm font-medium">
+        <i class="fas fa-truck mr-2"></i>Fast Worldwide Shipping (5 days delivery) | 100% Satisfaction Guarantee
+    </div>
+
+    <!-- Header/Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="https://servaas101.github.io/lead-with-purpose-and-influence-2025-11-14-20aap" class="flex items-center gap-2">
+                        <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-crown text-white text-lg"></i>
+                        </div>
+                        <span class="text-xl font-bold text-gray-900">Leadership</span>
+                    </a>
+                </div>
+
+                <!-- Back Navigation -->
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="https://servaas101.github.io/lead-with-purpose-and-influence-2025-11-14-20aap" class="nav-link text-gray-700 font-medium">
+                        <i class="fas fa-arrow-left mr-2"></i>Back
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-button md:hidden text-gray-700 focus:outline-none" aria-label="Toggle mobile menu">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="mobile-menu hidden md:hidden pb-4 border-t border-gray-200">
+                <a href="https://servaas101.github.io/lead-with-purpose-and-influence-2025-11-14-20aap" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded transition">
+                    <i class="fas fa-arrow-left mr-2"></i>Back
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Blog Hero Section -->
+    <section class="relative py-20 sm:py-24 bg-gradient-to-r from-blue-50 to-blue-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-4">
+                    Our Blog
+                </h1>
+                <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                    Discover insights, strategies, and stories from industry leaders on authentic leadership, professional development, and organizational excellence.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Purpose Section -->
+    <section class="py-16 sm:py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gray-50 border border-gray-200 rounded-xl p-8 sm:p-12">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Welcome to the Leadership Academy Blog</h2>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    Our blog is dedicated to empowering leaders at all levels with practical insights, actionable strategies, and inspiring stories. We explore the intersection of authentic leadership, emotional intelligence, organizational transformation, and personal growth.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    Whether you're just beginning your leadership journey or navigating complex organizational challenges, our content is designed to provide you with the knowledge, tools, and inspiration needed to lead with purpose and influence. From deep dives into values-based leadership to practical guides on team development and strategic communication, we cover topics that matter to today's leaders.
+                </p>
+                <p class="text-gray-600 leading-relaxed">
+                    Expect thought-provoking articles, research-backed insights, real-world case studies, and expert perspectives that will help you grow as a leader and create meaningful impact in your organization and community.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Blog Post -->
+    <section class="py-16 sm:py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-12">
+                <h2 class="section-title text-3xl sm:text-4xl font-bold text-gray-900 mb-4 pb-4">
+                    Latest Post
+                </h2>
+            </div>
+
+            <div class="blog-card bg-white border border-gray-200 rounded-xl overflow-hidden hover:border-blue-300">
+                <div class="p-8 sm:p-12">
+                    <div class="mb-4">
+                        <span class="inline-block text-sm font-semibold text-blue-600 bg-blue-100 px-4 py-2 rounded-full">
+                            <i class="fas fa-calendar mr-2"></i>November 14, 2025
+                        </span>
+                    </div>
+                    
+                    <h3 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 leading-tight">
+                        Building Authentic Leadership: The Foundation for Organizational Excellence
+                    </h3>
+                    
+                    <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                        Authentic leadership—grounded in self-awareness, values alignment, and genuine connection—drives organizational excellence. Leaders demonstrating authenticity create higher engagement, retention, and profitability. The four pillars include self-awareness, values alignment, relational transparency, and balanced processing. Research shows authentic leadership correlates with 31% lower turnover and 37% higher productivity. Development requires investing in self-awareness, clarifying values, practicing transparent communication, building diverse relationships, and establishing accountability. While vulnerability challenges leaders, authenticity strengthens credibility. Organizations supporting authentic leadership through mentorship and development initiatives foster cultures where people thrive, innovation flourishes, and sustainable success becomes achievable.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
+                                LA
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-900">Leadership Academy</p>
+                                <p class="text-sm text-gray-600">Professional Development</p>
+                            </div>
+                        </div>
+                        <a href="https://servaas101.github.io/lead-with-purpose-and-influence-2025-11-14-20aap/blog/getting-started-with-our-platform.html" class="btn-primary bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 inline-flex items-center gap-2 whitespace-nowrap">
+                            Read More
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- More Blog Posts Section -->
+    <section class="py-16 sm:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-12">
+                <h2 class="section-title text-3xl sm:text-4xl font-bold text-gray-900 mb-4 pb-4">
+                    More Stories Coming Soon
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl">
+                    We're constantly creating new content on leadership development, organizational excellence, and professional growth. Check back regularly for fresh insights and practical strategies.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Placeholder Card 1 -->
+                <div class="blog-card bg-white border border-gray-200 rounded-xl p-8 hover:border-blue-300 flex flex-col items-center justify-center min-h-64">
+                    <div class="text-center">
+                        <i class="fas fa-pencil-alt text-4xl text-gray-300 mb-4"></i>
+                        <p class="text-gray-400 font-medium">More articles coming soon</p>
+                    </div>
+                </div>
+
+                <!-- Placeholder Card 2 -->
+                <div class="blog-card bg-white border border-gray-200 rounded-xl p-8 hover:border-blue-300 flex flex-col items-center justify-center min-h-64">
+                    <div class="text-center">
+                        <i class="fas fa-pencil-alt text-4xl text-gray-300 mb-4"></i>
+                        <p class="text-gray-400 font-medium">More articles coming soon</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 sm:py-24 bg-gradient-to-r from-blue-600 to-blue-800 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <svg class="w-full h-full" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice">
+                <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="1"/>
+                </pattern>
+                <rect width="1200" height="600" fill="url(#grid)" />
+            </svg>
+        </div>
+        <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl sm:text-5xl font-bold text-white mb-6">
+                Ready to Transform Your Leadership?
+            </h2>
+            <p class="text-xl text-blue-100 mb-8 leading-relaxed">
+                Join thousands of leaders who have already transformed their careers and organizations through our proven programs and mentorship.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://leaddership.co.za/courses" class="btn-primary inline-block bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition duration-300">
+                    Explore Our Programs
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+                <a href="https://servaas101.github.io/lead-with-purpose-and-influence-2025-11-14-20aap" class="btn-primary inline-block bg-blue-700 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-900 transition duration-300 border-2 border-white">
+                    Back to Home
+                    <i class="fas fa-home ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-crown text-white"></i>
+                        </div>
+                        <span class="text-xl font-bold text-white">Leadership</span>
+                    </div>
+                    <p class="text-sm leading-relaxed mb-4">
+                        Empowering leaders worldwide to lead with purpose, integrity, and influence. Transform your skills and create meaningful impact.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition duration-300">
+                            <i class="fab fa-facebook-f text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition duration-300">
+                            <i class="fab fa-twitter text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition duration-300">
+                            <i class="fab fa-linkedin-in text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition duration-300">
+                            <i class="fab fa-instagram text-white"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="https://servaas101.github.io/lead-with-purpose-and-influence-2025-11-14-20aap" class="hover:text-blue-400 transition duration-300">Home</a></li>
+                        <li><a href="https://servaas101.github.io/lead-with-purpose-and-influence-2025-11-14-20aap#features" class="hover:text-blue-400 transition duration-300">Features</a></li>
+                        <li><a href="https://servaas101.github.io/lead-with-purpose-and-influence-2025-11-14-20aap#benefits" class="hover:text-blue-400 transition duration-300">Benefits</a></li>
+                        <li><a href="https://servaas101.github.io/lead-with-purpose-and-influence-2025-11-14-20aap#about" class="hover:text-blue-400 transition duration-300">About Us</a></li>
+                        <li><a href="https://servaas101.github.io/lead-with-purpose-and-influence-2025-11-14-20aap#testimonials" class="hover:text-blue-400 transition duration-300">Testimonials</a></li>
+                        <li><a href="https://servaas101.github.io/lead-with-purpose-and-influence-2025-11-14-20aap#faq" class="hover:text-blue-400 transition duration-300">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-6">Resources</h4>
+                    <ul class="space-y-3">
+                        <li><a href="https://leaddership.co.za/courses" class="hover:text-blue-400 transition duration-300">All Courses</a></li>
+                        <li><a href="blog.html" class="hover:text-blue-400 transition duration-300">Blog</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition duration-300">Webinars</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition duration-300">Community</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition duration-300">Events</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition duration-300">Support</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-6">Legal</h4>
+                    <ul class="space-y-3">
+                        <li><a href="privacy.html" class="hover:text-blue-400 transition duration-300">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="hover:text-blue-400 transition duration-300">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition duration-300">Cookie Policy</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition duration-300">Accessibility</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition duration-300">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Divider -->
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-sm text-gray-400">
+                        &copy; <span id="year"></span> Leadership Academy. All rights reserved. | Transforming leaders, transforming the world.
+                    </p>
+                    <div class="flex gap-6 text-sm">
+                        <a href="privacy.html" class="text-gray-400 hover:text-blue-400 transition duration-300">Privacy</a>
+                        <a href="terms.html" class="text-gray-400 hover:text-blue-400 transition duration-300">Terms</a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition duration-300">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="fixed bottom-8 right-8 w-12 h-12 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition duration-300 flex items-center justify-center hidden z-40" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        if (mobileMenuButton) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('active');
+            });
+
+            // Close menu when a link is clicked
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.remove('active');
+                });
+            });
+        }
+
+        // Scroll to Top Button
+        const scrollToTopButton = document.getElementById('scrollToTop');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollToTopButton.classList.remove('hidden');
+            } else {
+                scrollToTopButton.classList.add('hidden');
+            }
+        });
+
+        scrollToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && document.querySelector(href)) {
+                    e.preventDefault();
+                    document.querySelector(href).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
